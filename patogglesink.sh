@@ -25,16 +25,12 @@ toggle() {
 }
 
 case "$1" in
-	query)
+	query|-q)
 		query
 		;;
-	-q)
-		query
-		;;
-	toggle)
+	toggle|-t)
 		toggle
 		;;
-	-t)
-		toggle
-		;;
+	*)
+		echo "Usage:  -q Query\n\t-t Toggle"
 esac
